@@ -10,3 +10,7 @@ handlers:
 - url: /(.*)
   static_files: www/\1
   upload: www/(.*)
+
+- url: /work
+  static_files: www/work.html
+  upload: www/work.html
