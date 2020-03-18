@@ -18,15 +18,14 @@ time, mark, audio, video {
 
 :root {
   --mainColor: #fff;
-  --mainFont: "Dosis";
 }
 
 body
 {
-    font-family: var(mainFont), sans-serif;
+    font-family: 'Crimson Pro', sans-serif;
     font-size: 16px;
     line-height: 26px;
-    font-weight: 400;
+    font-weight: 200;
     color: #101010;
     background: url(images/background2.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -59,19 +58,6 @@ li
    padding: 1px;
 }
     
-.note{
-  top: auto;
-  bottom: 0;
-  color: #ddd;
-  font-size: 13px;
-  text-transform: none;
-  font-weight: 300;
-  text-align: center;
-  padding: 10px;
-  width: 100%;
-  max-width: 500px;
-}
-
 .doc-loader 
 {
     position: fixed;
@@ -123,7 +109,7 @@ li
     font-size: 13px;
     line-height: 20px;
     color: #fff;
-    font-weight: 400;
+    font-weight: 200;
     letter-spacing: 0.03cm;
 }
 
@@ -135,7 +121,7 @@ li
     font-weight: 400;
     letter-spacing: 0.03cm;
     background-size: 10px 40px;
-    transition: background-size 1s, color 0.5s;
+    transition: background-size 0.5s, color 0.25s;
     
 
 }
@@ -153,9 +139,9 @@ li
 
 h1.big-title
 {
-    font-family: "Dosis", sans-serif;
+    font-family: 'Crimson Pro', sans-serif;
     font-size: 54px;
-    font-weight: 400;
+    font-weight: 100;
     line-height: 100%;
     color: #fff;
     letter-spacing: -1.5px;    
@@ -236,7 +222,7 @@ h1.big-title
     .mob-menu
     {
         display: block;
-        font-family: var(mainFont), sans-serif;
+        font-family: 'Crimson Pro', sans-serif;
 
     }
 
@@ -283,7 +269,7 @@ h1.big-title
     {    
         font-size: 13px;
         line-height: 24px;
-        font-weight: 400;
+        font-weight: 200;
         letter-spacing: 0.03cm;
     }
 
