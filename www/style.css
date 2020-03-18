@@ -25,7 +25,7 @@ body
     font-family: 'Crimson Pro', sans-serif;
     font-size: 16px;
     line-height: 26px;
-    font-weight: 200;
+    font-weight: 1;
     color: #101010;
     background: url(images/background2.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -109,7 +109,7 @@ li
     font-size: 13px;
     line-height: 20px;
     color: #fff;
-    font-weight: 200;
+    font-weight: 1;
     letter-spacing: 0.03cm;
 }
 
@@ -118,10 +118,10 @@ li
     font-size: 13px;
     line-height: 20px;
     color: #101010;
-    font-weight: 400;
+    font-weight: 1;
     letter-spacing: 0.03cm;
     background-size: 10px 40px;
-    transition: background-size 0.5s, color 0.25s;
+    transition: background-size 0.5s, color 0.2s;
     
 
 }
@@ -130,7 +130,7 @@ li
 .mob-menu
 {
     display: none;
-    font-weight: 300;
+    font-weight: 1;
     font-size: 26px;
     margin-top: 20px;
     transition: color .2s linear;
@@ -141,7 +141,7 @@ h1.big-title
 {
     font-family: 'Crimson Pro', sans-serif;
     font-size: 54px;
-    font-weight: 100;
+    font-weight: 1;
     line-height: 100%;
     color: #fff;
     letter-spacing: -1.5px;    
@@ -269,7 +269,7 @@ h1.big-title
     {    
         font-size: 13px;
         line-height: 24px;
-        font-weight: 200;
+        font-weight: 1;
         letter-spacing: 0.03cm;
     }
 
