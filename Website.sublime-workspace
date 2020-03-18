@@ -4,8 +4,16 @@
 		"selected_items":
 		[
 			[
+				"main",
+				"mainColor"
+			],
+			[
 				"padding",
-				"padding-top\tproperty"
+				"padding-left\tproperty"
+			],
+			[
+				"transition",
+				"transition-property\tproperty"
 			]
 		]
 	},
@@ -24,16 +32,8 @@
 			"file": "www/style.css",
 			"settings":
 			{
-				"buffer_size": 4368,
+				"buffer_size": 5055,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app.yaml",
-			"settings":
-			{
-				"buffer_size": 249,
 				"line_ending": "Windows"
 			}
 		}
@@ -72,14 +72,9 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/D/Development/Projects/my-website",
-		"/D/Development/Projects/my-website/www",
-		"/D/Development/Projects/my-website/www/js"
-	],
 	"file_history":
 	[
+		"/D/Development/Projects/my-website/app.yaml",
 		"/D/Development/Projects/my-website/www/js/main.js",
 		"/D/Development/Projects/my-website/www/style.css",
 		"/D/Development/Projects/my-website/www/css/sm-clean.css",
@@ -106,6 +101,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"30p",
 			"main",
 			"style",
 			"line-",
@@ -192,16 +188,16 @@
 							"syntax": "Packages/HTML/HTML.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 5.33333333333,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -210,15 +206,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4368,
+						"buffer_size": 5055,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1351,
-								1351
+								2616,
+								2616
 							]
 						],
 						"settings":
@@ -228,38 +224,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 556.0,
+						"translation.y": 1304.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app.yaml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 249,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								249,
-								163
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/YAML/YAML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -341,7 +309,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
@@ -349,7 +317,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 253.0,
+	"side_bar_width": 89.0,
 	"status_bar_visible": false,
 	"template_settings":
 	{

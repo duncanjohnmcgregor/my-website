@@ -16,9 +16,14 @@ time, mark, audio, video {
     vertical-align:baseline;
 }
 
+:root {
+  --mainColor: #fff;
+  --mainFont: "Dosis";
+}
+
 body
 {
-    font-family: 'Dosis', sans-serif;
+    font-family: var(mainFont), sans-serif;
     font-size: 16px;
     line-height: 26px;
     font-weight: 400;
@@ -30,18 +35,42 @@ body
     background-size: cover;
 }
 
-body a
-{
+a {
+  background:
+     linear-gradient(
+       to bottom, var(--mainColor) 0%,
+       var(--mainColor) 100%
+     );
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 0px 0px;
+    color: #000;
     text-decoration: none;
-    color: #fff;
-    transition: color .2s linear;
+    border-radius: 0.5px;
+    padding-top: .5px;
+    padding-bottom: .5px;
+    padding-left: 2px;
+    padding-right: 2px;
+    transition: background-size 0.5s, color 0.5s;
 }
 
-body a:hover
+li
 {
-    color: #ee87a4;
+   padding: 1px;
 }
-
+    
+.note{
+  top: auto;
+  bottom: 0;
+  color: #ddd;
+  font-size: 13px;
+  text-transform: none;
+  font-weight: 300;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  max-width: 500px;
+}
 
 .doc-loader 
 {
@@ -74,8 +103,8 @@ body a:hover
     vertical-align: middle;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgba(10,10,10,0.8);;
-    border-radius: 1.5px;
+    background-color: rgba(10,10,10,0.8);
+    border-radius: 2px;
 }
 
 #header-main-menu
@@ -92,28 +121,32 @@ body a:hover
 .main-menu.sm-clean a
 {    
     font-size: 13px;
-    line-height: 30px;
+    line-height: 20px;
     color: #fff;
     font-weight: 400;
-    transition: color .2s linear;
     letter-spacing: 0.03cm;
 }
 
 .main-menu.sm-clean a:hover
 {    
     font-size: 13px;
-    line-height: 30px;
-    color: #333333;
+    line-height: 20px;
+    color: #101010;
     font-weight: 400;
     letter-spacing: 0.03cm;
+    background-size: 10px 40px;
+    transition: background-size 1s, color 0.5s;
+    
+
 }
 
+    
 .mob-menu
 {
     display: none;
     font-weight: 300;
-    font-size: 20px;
-    margin-top: 10px;
+    font-size: 26px;
+    margin-top: 20px;
     transition: color .2s linear;
     color: #fff;
 }
@@ -129,7 +162,7 @@ h1.big-title
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: auto
+    margin-top: auto;
 }
 
 .sm-clean {
@@ -148,6 +181,7 @@ h1.big-title
 
 /* Desktop only */
 @media screen and (min-width: 884px) {   
+    
     .main-menu
     {
         display: block;
@@ -164,15 +198,16 @@ h1.big-title
     }
 
     .centered {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-right: 45px;
-    padding-left: 45px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 45px;
+        padding-left: 45px;
     }
 }
 
 /* Mobile only */
 @media screen and (max-width: 884px) { 
+
     .centered {
         padding-top: 5px;
         padding-bottom: 5px;
@@ -201,7 +236,7 @@ h1.big-title
     .mob-menu
     {
         display: block;
-        font-family: "Dosis", sans-serif;
+        font-family: var(mainFont), sans-serif;
 
     }
 
@@ -232,22 +267,25 @@ h1.big-title
 
     .sm-clean a, .sm-clean a:hover, .sm-clean a:focus, .sm-clean a:active
     {
-        padding-right: 0;
-        padding-left: 0;
+        padding-top: .5px;
+        padding-bottom: .5px;
+        padding-left: 2px;
+        padding-right: 2px;
     }
 
     .main-menu.sm-clean a 
     {
         line-height: 24px;
+        color: #fff;
     }
 
     .main-menu.sm-clean a:hover
     {    
         font-size: 13px;
         line-height: 24px;
-        color: #333333;
         font-weight: 400;
         letter-spacing: 0.03cm;
     }
+
 }
 
