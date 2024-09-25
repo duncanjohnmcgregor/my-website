@@ -164,25 +164,9 @@
     <!-- New script for handling navigation -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            function initializeMenu() {
-                if (typeof jQuery !== 'undefined' && jQuery.isFunction(jQuery)) {
-                    jQuery('.main-menu a').on('click', function (e) {
-                        var target = jQuery(this).attr('href');
-                        if (target.startsWith('#')) {
-                            e.preventDefault();
-                            jQuery('.content-section').hide();
-                            jQuery(target).show();
-                            jQuery('#home').toggle(target === '#home');
-                        }
-                    });
-                } else {
-                    // jQuery is not loaded yet, try again in 50ms
-                    setTimeout(initializeMenu, 50);
-                }
+            if (typeof jQuery === 'undefined') {
+                console.error('jQuery is not loaded');
             }
-
-            // Start trying to initialize
-            initializeMenu();
         });
     </script>
 </body>

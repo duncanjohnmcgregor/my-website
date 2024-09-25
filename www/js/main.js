@@ -1,4 +1,4 @@
-jQuery(function ($) {
+jQuery(document).ready(function ($) {
     //Show-Hide Mobile Menu
     $('.mob-menu').on("click", showHideMobMenu);
     if ($("body").width() <= 925) {
@@ -14,17 +14,19 @@ jQuery(function ($) {
 
     var $mainMenu = $('.main-menu').on('click', 'span.sub-arrow', function (e) {
         var obj = $mainMenu.data('smartmenus');
-        if (obj.isCollapsible()) {
+        if (obj && obj.isCollapsible()) {
             var $item = $(this).parent(),
                 $sub = $item.parent().dataSM('sub');
-            $sub.dataSM('arrowClicked', true);
+            if ($sub && $sub.dataSM) {
+                $sub.dataSM('arrowClicked', true);
+            }
         }
     }).bind({
         'beforeshow.smapi': function (e, menu) {
             var obj = $mainMenu.data('smartmenus');
-            if (obj.isCollapsible()) {
+            if (obj && obj.isCollapsible()) {
                 var $menu = $(menu);
-                if (!$menu.dataSM('arrowClicked')) {
+                if ($menu.dataSM && !$menu.dataSM('arrowClicked')) {
                     return false;
                 }
                 $menu.removeDataSM('arrowClicked');
