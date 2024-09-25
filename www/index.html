@@ -65,6 +65,9 @@
             </p>
         </div>
 
+        <!-- Add this button after the resume-header div -->
+        <button id="back-to-home" class="back-button">Back to Home</button>
+
         <section class="professional-experience">
             <h2 class="section-toggle">Professional Experience <span class="toggle-icon">+</span></h2>
             <div class="section-content">
@@ -204,14 +207,24 @@
             if (typeof jQuery === 'undefined') {
                 console.error('jQuery is not loaded');
             }
-        });
 
-        // Toggle functionality for resume sections
-        const sectionToggles = document.querySelectorAll('.section-toggle');
-        sectionToggles.forEach(toggle => {
-            toggle.addEventListener('click', function () {
-                const section = this.closest('section');
-                section.classList.toggle('section-expanded');
+            // Toggle functionality for resume sections
+            const sectionToggles = document.querySelectorAll('.section-toggle');
+            sectionToggles.forEach(toggle => {
+                toggle.addEventListener('click', function () {
+                    const section = this.closest('section');
+                    section.classList.toggle('section-expanded');
+                });
+            });
+
+            // Add event listener for the back button
+            const backButton = document.getElementById('back-to-home');
+            const resumeSection = document.getElementById('resume');
+            const homePage = document.getElementById('home');
+
+            backButton.addEventListener('click', function () {
+                resumeSection.style.display = 'none';
+                homePage.style.display = 'block';
             });
         });
     </script>

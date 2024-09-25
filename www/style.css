@@ -93,7 +93,7 @@ li {
     vertical-align: middle;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgba(10, 10, 10, 0.5);
+    background-color: rgba(10, 10, 10, 0.9);
     border-radius: 2px;
 }
 
@@ -355,4 +355,33 @@ li {
 
 #resume .resume-header {
     margin-bottom: 20px;
+}
+
+/* Style for the back button */
+.back-button {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 30px 0;
+    background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 0px 0px;
+    color: #000;
+    text-decoration: none;
+    border-radius: 0.5px;
+    padding-top: 3.5px;
+    padding-bottom: 3.5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-family: 'Crimson Pro', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-size 0.5s, color 0.5s;
+}
+
+.back-button:hover {
+    background-size: 100% 100%;
+    color: #101010;
 }
