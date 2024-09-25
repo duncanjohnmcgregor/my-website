@@ -157,31 +157,33 @@
         </section>
     </div>
 
-    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type='text/javascript' src='js/jquery.smartmenus.min.js'></script>
     <script type='text/javascript' src='js/main.js'></script>
 
     <!-- New script for handling navigation -->
     <script>
-        function initializeMenu() {
-            if (typeof jQuery != 'undefined') {
-                $('.main-menu a').on('click', function (e) {
-                    var target = $(this).attr('href');
-                    if (target.startsWith('#')) {
-                        e.preventDefault();
-                        $('.content-section').hide();
-                        $(target).show();
-                        $('#home').toggle(target === '#home');
-                    }
-                });
-            } else {
-                // jQuery is not loaded yet, try again in 50ms
-                setTimeout(initializeMenu, 50);
+        document.addEventListener('DOMContentLoaded', function () {
+            function initializeMenu() {
+                if (typeof jQuery !== 'undefined' && jQuery.isFunction(jQuery)) {
+                    jQuery('.main-menu a').on('click', function (e) {
+                        var target = jQuery(this).attr('href');
+                        if (target.startsWith('#')) {
+                            e.preventDefault();
+                            jQuery('.content-section').hide();
+                            jQuery(target).show();
+                            jQuery('#home').toggle(target === '#home');
+                        }
+                    });
+                } else {
+                    // jQuery is not loaded yet, try again in 50ms
+                    setTimeout(initializeMenu, 50);
+                }
             }
-        }
 
-        // Start trying to initialize
-        initializeMenu();
+            // Start trying to initialize
+            initializeMenu();
+        });
     </script>
 </body>
 
