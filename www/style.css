@@ -267,14 +267,14 @@ h1.big-title {
 
 #resume .resume-header p {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 #resume .resume-header a {
     color: #fff;
     text-decoration: none;
     font-size: 1.5em;
-    margin: 0 10px;
+    margin: 0 0px;
     transition: opacity 0.3s;
 }
 
@@ -372,7 +372,7 @@ li {
 }
 
 #resume .resume-header {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 /* Style for the back button */
@@ -405,7 +405,7 @@ li {
 
 /* Adjust spacing for resume sections */
 #resume .resume-header {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 #resume h2:first-of-type {
