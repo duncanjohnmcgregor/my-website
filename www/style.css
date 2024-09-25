@@ -241,10 +241,15 @@ h1.big-title {
 #resume {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #fff;
+    /* Changed from #333 to white */
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    background-color: rgba(10, 10, 10, 0.5);
+    /* Added black background with opacity */
+    border-radius: 2px;
+    /* Added to match the main menu style */
 }
 
 .resume-header {
@@ -261,7 +266,8 @@ h1.big-title {
 }
 
 h2 {
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid #fff;
+    /* Changed from #333 to white */
     padding-bottom: 5px;
     margin-top: 30px;
 }
