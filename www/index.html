@@ -28,6 +28,8 @@
     <link href="https://fonts.googleapis.com/css?family=Crimson+Pro" rel="stylesheet" type='text/css'>
     <link href='style.css' rel="stylesheet" type="text/css" />
     <link href='images/favicon.png' rel="icon" />
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -56,104 +58,139 @@
         <div class="resume-header">
             <h1>Duncan McGregor</h1>
             <p>
-                personal website <a href="https://duncans.page">duncans.page</a> |
-                email <a href="mailto:duncanjohnmcgregor@gmail.com">duncanjohnmcgregor@gmail.com</a> |
-                linkedin <a href="https://linkedin.com/in/dunmcg">linkedin.com/in/dunmcg</a> |
-                phone +61 431 425 508
+                <a href="https://duncans.page" title="Personal Website"><i class="fas fa-globe"></i></a> |
+                <a href="mailto:duncanjohnmcgregor@gmail.com" title="Email"><i class="fas fa-envelope"></i></a> |
+                <a href="https://linkedin.com/in/dunmcg" title="LinkedIn"><i class="fab fa-linkedin"></i></a> |
+                <a href="tel:+15126671956" title="Phone"><i class="fas fa-phone"></i></a>
             </p>
         </div>
 
         <section class="professional-experience">
-            <h2>Professional Experience</h2>
+            <h2 class="section-toggle">Professional Experience <span class="toggle-icon">+</span></h2>
+            <div class="section-content">
+                <div class="job">
+                    <h3>Deloitte / Cloud and Engineering Lead, WA</h3>
+                    <p class="date">SEP 2022 - PRESENT</p>
+                    <p>Cloud and engineering team leader in Western Australia. Responsibilities & accomplishments
+                        include:
+                    </p>
+                    <ul>
+                        <li>Built and empowered a high-performing team of 10 engineers and consultants in Western
+                            Australia,
+                            increasing headcount by 100%. Implemented strategic cross-training programs in DevOps and
+                            quality engineering and championed targeted talent acquisitions;</li>
+                        <li>Identified and automated inefficient manual processes which were leading to resource
+                            allocation
+                            delays, reducing resource analysis time by 50% and freeing up over 12 total hours per week
+                            for
+                            leaders. Developed and implemented an innovative resourcing model using Excel, Power Query,
+                            and
+                            Power Automate;</li>
+                        <li>Led technical program management for a complex cyber recovery program, delivering across
+                            critical work streams including cloud infrastructure, networking, enterprise applications,
+                            end
+                            user compute and cyber uplift. Successfully refined and communicated business requirements,
+                            implemented a streamlined server provisioning process for faster delivery, and spearheaded
+                            the
+                            development of a comprehensive enterprise cloud strategy encompassing FinOps, governance,
+                            and
+                            skills training to enable sustainable cloud adoption;</li>
+                        <li>Spearheaded strategic sales initiatives focused on state government and healthcare,
+                            generating
+                            over $1.5M in additional revenue. Established Deloitte as the preferred partner for the
+                            number
+                            one WA cloud vendor.</li>
+                    </ul>
+                </div>
 
-            <div class="job">
-                <h3>Deloitte / Cloud and Engineering Lead, WA</h3>
-                <p class="date">SEP 2022 - PRESENT</p>
-                <p>Cloud and engineering team leader in Western Australia. Responsibilities & accomplishments include:
-                </p>
-                <ul>
-                    <li>Built and empowered a high-performing team of 10 engineers and consultants in Western Australia,
-                        increasing headcount by 100%. Implemented strategic cross-training programs in DevOps and
-                        quality engineering and championed targeted talent acquisitions;</li>
-                    <li>Identified and automated inefficient manual processes which were leading to resource allocation
-                        delays, reducing resource analysis time by 50% and freeing up over 12 total hours per week for
-                        leaders. Developed and implemented an innovative resourcing model using Excel, Power Query, and
-                        Power Automate;</li>
-                    <li>Led technical program management for a complex cyber recovery program, delivering across
-                        critical work streams including cloud infrastructure, networking, enterprise applications, end
-                        user compute and cyber uplift. Successfully refined and communicated business requirements,
-                        implemented a streamlined server provisioning process for faster delivery, and spearheaded the
-                        development of a comprehensive enterprise cloud strategy encompassing FinOps, governance, and
-                        skills training to enable sustainable cloud adoption;</li>
-                    <li>Spearheaded strategic sales initiatives focused on state government and healthcare, generating
-                        over $1.5M in additional revenue. Established Deloitte as the preferred partner for the number
-                        one WA cloud vendor.</li>
-                </ul>
-            </div>
+                <div class="job">
+                    <h3>PricewaterhouseCoopers (PwC) / Senior Manager Digital Innovation and Cloud Engineering</h3>
+                    <p class="date">APR 2020 - SEP 2022</p>
+                    <p>Technical project manager and product owner. Responsibilities & accomplishments include:</p>
+                    <ul>
+                        <li>Led a cross-functional team to deliver a modern program and financial management reporting
+                            product that slashed monthly reporting time by 80%. We worked closely with users to
+                            iteratively
+                            design and develop elegant user interfaces and automated data workflows utilizing Excel,
+                            SQL,
+                            Power Query, and Power BI;</li>
+                        <li>Owned the product vision and execution of an AWS & Snowflake-based data platform for a
+                            health
+                            insurance provider's digital transformation program. Defined user and regulatory compliance
+                            requirements, analyzed legacy data, and automated data mapping & QA across 4 enterprise
+                            platforms, achieving on-time delivery and eliminating manual processes, resulting in over
+                            $200k
+                            in resource cost savings;</li>
+                        <li>Guided a cross-functional team of 10 to deliver a transformative cloud modernization
+                            strategy
+                            for a leading national insurance company. Successfully streamlined technology, processes,
+                            and
+                            policies across cloud management, DevSecOps, observability, and release management,
+                            improving
+                            release velocity by over 20%;</li>
+                        <li>Generated over $2M in subsequent revenue for the business through high-quality deliverables
+                            and
+                            exceptional customer success metrics, with an average NPS score of 9.5.</li>
+                    </ul>
+                </div>
 
-            <div class="job">
-                <h3>PricewaterhouseCoopers (PwC) / Senior Manager Digital Innovation and Cloud Engineering</h3>
-                <p class="date">APR 2020 - SEP 2022</p>
-                <p>Technical project manager and product owner. Responsibilities & accomplishments include:</p>
-                <ul>
-                    <li>Led a cross-functional team to deliver a modern program and financial management reporting
-                        product that slashed monthly reporting time by 80%. We worked closely with users to iteratively
-                        design and develop elegant user interfaces and automated data workflows utilizing Excel, SQL,
-                        Power Query, and Power BI;</li>
-                    <li>Owned the product vision and execution of an AWS & Snowflake-based data platform for a health
-                        insurance provider's digital transformation program. Defined user and regulatory compliance
-                        requirements, analyzed legacy data, and automated data mapping & QA across 4 enterprise
-                        platforms, achieving on-time delivery and eliminating manual processes, resulting in over $200k
-                        in resource cost savings;</li>
-                    <li>Guided a cross-functional team of 10 to deliver a transformative cloud modernization strategy
-                        for a leading national insurance company. Successfully streamlined technology, processes, and
-                        policies across cloud management, DevSecOps, observability, and release management, improving
-                        release velocity by over 20%;</li>
-                    <li>Generated over $2M in subsequent revenue for the business through high-quality deliverables and
-                        exceptional customer success metrics, with an average NPS score of 9.5.</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <h3>Powerledger / Product Manager & Pre-Sales Analyst</h3>
-                <p class="date">SEP 2017 - APR 2020</p>
-                <p>Product management and pre-sales focusing on US market clients. Responsibilities & accomplishments
-                    include:</p>
-                <ul>
-                    <li>Spearheaded the development of Power Ledger's groundbreaking blockchain-based renewable energy
-                        credit marketplace from its infancy, building a base of 5 enterprise customers within a year.
-                        Led a cross-functional product team, analyzed market research and outputs of extensive product
-                        interviews to identify key pain points and tailor the solution for maximum impact;</li>
-                    <li>Owned requirements gathering and product strategy for 3 core offerings (xGrid, uGrid & TraceX),
-                        driving their evolution through detailed economic modeling and financial feasibility analysis.
-                        Ensured financial viability and long-term value proposition for each product;</li>
-                    <li>Established and led Power Ledger's San Francisco office, overseeing initial product development
-                        for TraceX and leading high-impact technical pre-sales conversations with US EV and renewables
-                        companies. Secured crucial early-stage partnerships and drove market entry in the US; and,</li>
-                    <li>Industry thought leader: presented Power Ledger's innovative solutions at 3 international energy
-                        & renewables conferences in the US and China. Built brand awareness and established Power Ledger
-                        as a key player in the global energy revolution.</li>
-                </ul>
+                <div class="job">
+                    <h3>Powerledger / Product Manager & Pre-Sales Analyst</h3>
+                    <p class="date">SEP 2017 - APR 2020</p>
+                    <p>Product management and pre-sales focusing on US market clients. Responsibilities &
+                        accomplishments
+                        include:</p>
+                    <ul>
+                        <li>Spearheaded the development of Power Ledger's groundbreaking blockchain-based renewable
+                            energy
+                            credit marketplace from its infancy, building a base of 5 enterprise customers within a
+                            year.
+                            Led a cross-functional product team, analyzed market research and outputs of extensive
+                            product
+                            interviews to identify key pain points and tailor the solution for maximum impact;</li>
+                        <li>Owned requirements gathering and product strategy for 3 core offerings (xGrid, uGrid &
+                            TraceX),
+                            driving their evolution through detailed economic modeling and financial feasibility
+                            analysis.
+                            Ensured financial viability and long-term value proposition for each product;</li>
+                        <li>Established and led Power Ledger's San Francisco office, overseeing initial product
+                            development
+                            for TraceX and leading high-impact technical pre-sales conversations with US EV and
+                            renewables
+                            companies. Secured crucial early-stage partnerships and drove market entry in the US; and,
+                        </li>
+                        <li>Industry thought leader: presented Power Ledger's innovative solutions at 3 international
+                            energy
+                            & renewables conferences in the US and China. Built brand awareness and established Power
+                            Ledger
+                            as a key player in the global energy revolution.</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
         <section class="education-certifications">
-            <h2>Education and Certifications</h2>
-            <ul>
-                <li>Certified Scrum Product Owner & Certified Scrum Master July 2022</li>
-                <li>University of Western Australia / BComm (Professional Economics) 2014 - 2018</li>
-            </ul>
+            <h2 class="section-toggle">Education and Certifications <span class="toggle-icon">+</span></h2>
+            <div class="section-content">
+                <ul>
+                    <li>Certified Scrum Product Owner & Certified Scrum Master July 2022</li>
+                    <li>University of Western Australia / BComm (Professional Economics) 2014 - 2018</li>
+                </ul>
+            </div>
         </section>
 
         <section class="skills-tools">
-            <h2>Skills and Tools</h2>
-            <ul>
-                <li>Advanced modeling and data visualisation for KPI/OKR reporting, scenario analysis and proof of
-                    concept development using SQL, Excel (VBA & Power Query), PowerBI (DAX), Python & Tableau.</li>
-                <li>Web development & infrastructure automation for personal projects using React, Python, Terraform,
-                    GCP</li>
-                <li>Strategic communication and visual storytelling using PowerPoint</li>
-            </ul>
+            <h2 class="section-toggle">Skills and Tools <span class="toggle-icon">+</span></h2>
+            <div class="section-content">
+                <ul>
+                    <li>Advanced modeling and data visualisation for KPI/OKR reporting, scenario analysis and proof of
+                        concept development using SQL, Excel (VBA & Power Query), PowerBI (DAX), Python & Tableau.</li>
+                    <li>Web development & infrastructure automation for personal projects using React, Python,
+                        Terraform,
+                        GCP</li>
+                    <li>Strategic communication and visual storytelling using PowerPoint</li>
+                </ul>
+            </div>
         </section>
     </div>
 
@@ -167,6 +204,15 @@
             if (typeof jQuery === 'undefined') {
                 console.error('jQuery is not loaded');
             }
+        });
+
+        // Toggle functionality for resume sections
+        const sectionToggles = document.querySelectorAll('.section-toggle');
+        sectionToggles.forEach(toggle => {
+            toggle.addEventListener('click', function () {
+                const section = this.closest('section');
+                section.classList.toggle('section-expanded');
+            });
         });
     </script>
 </body>
