@@ -163,17 +163,25 @@
 
     <!-- New script for handling navigation -->
     <script>
-        $(document).ready(function () {
-            $('.main-menu a').on('click', function (e) {
-                var target = $(this).attr('href');
-                if (target.startsWith('#')) {
-                    e.preventDefault();
-                    $('.content-section').hide();
-                    $(target).show();
-                    $('#home').toggle(target === '#home');
-                }
-            });
-        });
+        function initializeMenu() {
+            if (typeof jQuery != 'undefined') {
+                $('.main-menu a').on('click', function (e) {
+                    var target = $(this).attr('href');
+                    if (target.startsWith('#')) {
+                        e.preventDefault();
+                        $('.content-section').hide();
+                        $(target).show();
+                        $('#home').toggle(target === '#home');
+                    }
+                });
+            } else {
+                // jQuery is not loaded yet, try again in 50ms
+                setTimeout(initializeMenu, 50);
+            }
+        }
+
+        // Start trying to initialize
+        initializeMenu();
     </script>
 </body>
 
