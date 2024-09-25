@@ -27,8 +27,8 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    overflow: hidden;
-    /* Changed from overflow-x: hidden and overflow-y: auto to prevent all scrolling */
+    overflow: auto;
+    /* Changed from 'hidden' to 'auto' to allow scrolling */
     scrollbar-width: none;
     /* For Firefox */
     -ms-overflow-style: none;
@@ -93,7 +93,7 @@ li {
     vertical-align: middle;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgba(10, 10, 10, 0.9);
+    background-color: rgba(10, 10, 10, 0.5);
     border-radius: 2px;
 }
 
@@ -248,7 +248,6 @@ h1.big-title {
 
 #resume {
     font-family: 'Crimson Pro', sans-serif;
-    /* Changed to match the body font */
     line-height: 1.6;
     color: #fff;
     max-width: 800px;
@@ -256,6 +255,14 @@ h1.big-title {
     padding: 20px;
     background-color: rgba(10, 10, 10, 0.8);
     border-radius: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 90vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 #resume .resume-header p {
@@ -283,7 +290,6 @@ h1.big-title {
 .resume-header h1 {
     margin-bottom: 10px;
     font-weight: 1;
-    /* Added to match the light font weight used elsewhere */
 }
 
 .resume-header p {
@@ -295,7 +301,6 @@ h2 {
     padding-bottom: 5px;
     margin-top: 30px;
     font-weight: 1;
-    /* Added to match the light font weight used elsewhere */
 }
 
 .job {
@@ -303,14 +308,21 @@ h2 {
 }
 
 .job h3 {
-    margin-bottom: 5px;
+    margin-bottom: 1px;
     font-weight: 1;
-    /* Added to match the light font weight used elsewhere */
+    font-size: 1.2em;
+}
+
+.job p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 0.95em;
+    color: #ffffff;
 }
 
 .date {
     font-style: italic;
-    margin-bottom: 10px;
+    margin-bottom: 0%;
 }
 
 ul {
@@ -318,7 +330,7 @@ ul {
 }
 
 li {
-    margin-bottom: 6px;
+    margin-bottom: 2px;
 }
 
 /* Expandable resume sections */
@@ -335,9 +347,10 @@ li {
 }
 
 .section-content {
-    display: none;
-    transition: max-height 0.3s ease;
+    max-height: 0;
     overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    opacity: 0;
 }
 
 .section-expanded .toggle-icon {
@@ -345,12 +358,17 @@ li {
 }
 
 .section-expanded .section-content {
-    display: block;
+    max-height: 9999px;
+    /* Effectively unlimited */
+    opacity: 1;
+    transition: max-height 0.5s ease-in, opacity 0.5s ease-in;
 }
 
 /* Adjust existing styles */
 #resume h2 {
     margin-bottom: 10px;
+    margin-top: 10px;
+    /* Reduced from 30px */
 }
 
 #resume .resume-header {
@@ -359,29 +377,50 @@ li {
 
 /* Style for the back button */
 .back-button {
-    display: inline-block;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 30px 0;
+    display: block;
+    font-family: 'Crimson Pro', sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+    color: #fff;
+    font-weight: 1;
+    letter-spacing: 0.03cm;
     background: linear-gradient(to bottom, #fff 0%, #fff 100%);
     background-position: 0 100%;
     background-repeat: repeat-x;
     background-size: 0px 0px;
-    color: #000;
     text-decoration: none;
     border-radius: 0.5px;
-    padding-top: 3.5px;
-    padding-bottom: 3.5px;
-    padding-left: 5px;
-    padding-right: 5px;
-    font-family: 'Crimson Pro', sans-serif;
-    font-size: 16px;
-    cursor: pointer;
+    padding: 3.5px 5px;
     transition: background-size 0.5s, color 0.5s;
+    cursor: pointer;
+    border: none;
+    margin: 20px auto;
+    width: fit-content;
 }
 
 .back-button:hover {
-    background-size: 100% 100%;
     color: #101010;
+    background-size: 10px 40px;
+}
+
+/* Adjust spacing for resume sections */
+#resume .resume-header {
+    margin-bottom: 20px;
+}
+
+#resume h2:first-of-type {
+    margin-top: 20px;
+}
+
+#resume .resume-header h2.subtitle {
+    font-family: 'Crimson Pro', sans-serif;
+    font-size: 24px;
+    font-weight: 1;
+    line-height: 100%;
+    color: #fff;
+    letter-spacing: -0.5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-bottom: none;
+    padding-bottom: 0;
 }

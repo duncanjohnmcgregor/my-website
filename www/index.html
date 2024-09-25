@@ -30,6 +30,18 @@
     <link href='images/favicon.png' rel="icon" />
     <!-- Add Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        #home,
+        #resume {
+            transition: opacity 0.1s ease-in-out; // Changed from 0.5s to 0.3s
+        }
+
+        #resume {
+            opacity: 0;
+            pointer-events: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -56,7 +68,8 @@
     <!-- New resume section -->
     <div id="resume" class="content-section" style="display: none;">
         <div class="resume-header">
-            <h1>Duncan McGregor</h1>
+            <h1 class="big-title">duncan mcgregor</h1>
+            <h2 class="subtitle">product & project manager</h2>
             <p>
                 <a href="https://duncans.page" title="Personal Website"><i class="fas fa-globe"></i></a> |
                 <a href="mailto:duncanjohnmcgregor@gmail.com" title="Email"><i class="fas fa-envelope"></i></a> |
@@ -72,8 +85,17 @@
             <h2 class="section-toggle">Professional Experience <span class="toggle-icon">+</span></h2>
             <div class="section-content">
                 <div class="job">
-                    <h3>Deloitte / Cloud and Engineering Lead, WA</h3>
-                    <p class="date">SEP 2022 - PRESENT</p>
+                    <h3>Gorilla / US Project Management Lead / Austin, TX</h3>
+                    <p class="date">APR 2024 - PRESENT</p>
+                    <p>Delivery lead for North American operations. Responsibilities & accomplishments include:</p>
+                    <ul>
+                        <li>New role, details to be added.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <h3>Deloitte / Cloud and Engineering Lead / Perth, WA</h3>
+                    <p class="date">SEP 2022 - APR 2024</p>
                     <p>Cloud and engineering team leader in Western Australia. Responsibilities & accomplishments
                         include:
                     </p>
@@ -107,7 +129,7 @@
                 </div>
 
                 <div class="job">
-                    <h3>PricewaterhouseCoopers (PwC) / Senior Manager Digital Innovation and Cloud Engineering</h3>
+                    <h3>PricewaterhouseCoopers (PwC) / Senior Manager - Cloud Engineering / Perth, WA</h3>
                     <p class="date">APR 2020 - SEP 2022</p>
                     <p>Technical project manager and product owner. Responsibilities & accomplishments include:</p>
                     <ul>
@@ -138,7 +160,7 @@
                 </div>
 
                 <div class="job">
-                    <h3>Powerledger / Product Manager & Pre-Sales Analyst</h3>
+                    <h3>Powerledger / Product Manager & Pre-Sales Analyst / Perth, WA</h3>
                     <p class="date">SEP 2017 - APR 2020</p>
                     <p>Product management and pre-sales focusing on US market clients. Responsibilities &
                         accomplishments
@@ -217,17 +239,40 @@
                 });
             });
 
-            // Add event listener for the back button
+            // Add event listeners for navigation
+            const resumeLink = document.querySelector('a[href="#resume"]');
             const backButton = document.getElementById('back-to-home');
             const resumeSection = document.getElementById('resume');
             const homePage = document.getElementById('home');
 
+            resumeLink.addEventListener('click', function (e) {
+                e.preventDefault();
+                homePage.style.opacity = '0';
+                setTimeout(() => {
+                    homePage.style.display = 'none';
+                    resumeSection.style.display = 'flex';
+                    setTimeout(() => {
+                        resumeSection.style.opacity = '1';
+                        resumeSection.style.pointerEvents = 'auto';
+                    }, 50);
+                }, 100); // Changed from 500 to 300
+            });
+
             backButton.addEventListener('click', function () {
-                resumeSection.style.display = 'none';
-                homePage.style.display = 'block';
+                resumeSection.style.opacity = '0';
+                resumeSection.style.pointerEvents = 'none';
+                setTimeout(() => {
+                    resumeSection.style.display = 'none';
+                    homePage.style.display = 'block';
+                    setTimeout(() => {
+                        homePage.style.opacity = '1';
+                    }, 50);
+                }, 100); // Changed from 500 to 300
             });
         });
     </script>
 </body>
+
+</html>
 
 </html>
